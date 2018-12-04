@@ -1,5 +1,7 @@
 package com.example.grego.movilecompleto;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +15,20 @@ public class Entrega3 extends AppCompatActivity {
     private boolean active = false;
     private int counter = 0;
     TextView text_time;
+    private String sharedPrefFile = "entrega3";
+
+    @Override
+    protected void onStop() {
+        Button mBtnAutomaticClick;
+        mBtnAutomaticClick = findViewById(R.id.btn_stop2);
+        mBtnAutomaticClick.performClick();
+
+        SharedPreferences mPreferences = getSharedPreferences(sharedPrefFile,MODE_PRIVATE);
+        SharedPreferences.Editor spEditor = mPreferences.edit();
+        spEditor.putString("count",String.valueOf(counter));
+        spEditor.apply();
+        super.onStop();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +38,9 @@ public class Entrega3 extends AppCompatActivity {
         final Button btn_stop = (Button) findViewById(R.id.btn_stop2);
         final Button btn_reset = (Button) findViewById(R.id.btn_reset);
         text_time = (TextView) findViewById(R.id.text_time);
-
-        text_time.setText("0");
+        SharedPreferences mPreferences = getSharedPreferences(sharedPrefFile,MODE_PRIVATE);
+        text_time.setText(mPreferences.getString("count","0"));
+        counter = Integer.valueOf(mPreferences.getString("count","0"));
         btn_stop.setEnabled(false);
 
         btn_start.setOnClickListener(new View.OnClickListener() {
