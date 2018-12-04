@@ -4,6 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Entrega3">
+    tools:context=".Entrega3"
+    tools:layout_editor_absoluteY="81dp">
 
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_weight="1"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_start2" />
+
+    <Button
+        android:id="@+id/btn_stop2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="195dp"
+        android:layout_weight="1"
+        android:text="Stop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/text_time" />
+
+    <Button
+        android:id="@+id/btn_start2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_weight="1"
+        android:text="Start"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btn_stop2"
+        app:layout_constraintStart_toStartOf="@+id/btn_reset" />
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="32dp"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_start2" />
 </android.support.constraint.ConstraintLayout>
