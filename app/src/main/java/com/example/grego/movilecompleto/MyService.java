@@ -31,7 +31,7 @@ public class MyService extends Service {
         public void handleMessage(Message msg) {
             Intent intent = (Intent) msg.obj;
             int iteration = intent.getIntExtra(Entrega4.ITERATION, 0);
-            String msgs = "(IS) Processing Iteration " + iteration;
+            String msgs = "(S) Processing Iteration " + iteration;
             Intent response = new Intent(RESPONSE_ACTION);
             response.putExtra(RESPONSE, msgs);
             response.putExtra(Entrega4.WHO, ME);

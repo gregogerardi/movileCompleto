@@ -21,6 +21,7 @@ public class Multiplication extends AppCompatActivity {
         final EditText num2 = (EditText) findViewById(R.id.editTextOperando2);
         num1.setText(EMPTY);
         num2.setText(EMPTY);
+        num2.requestFocus();
         boton_multiplicar.setOnClickListener(v -> {
             Intent replyIntent = new Intent();
             int resultado = Integer.parseInt(num1.getText().toString()) * Integer.parseInt(num2.getText().toString());

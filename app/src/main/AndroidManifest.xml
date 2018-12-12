@@ -21,13 +21,16 @@
         <activity android:name=".Multiplication" />
         <activity android:name=".Entrega3" />
         <activity android:name=".Entrega4" />
-        <activity android:name=".Entrega5" />
 
         <service
             android:name=".MyIntentService"
             android:exported="false" />
         <service
             android:name=".MyService"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name=".MessengerService"
             android:enabled="true"
             android:exported="true"></service>
     </application>
