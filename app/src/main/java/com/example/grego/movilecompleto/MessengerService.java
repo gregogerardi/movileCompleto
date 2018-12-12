@@ -1,6 +1,7 @@
 package com.example.grego.movilecompleto;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
@@ -18,9 +19,7 @@ public class MessengerService extends Service {
     }
     private static final String TAG = MessengerService.class.getCanonicalName();
     private final Random nGenerator = new Random();
-
     public static final int ME=3;
-
     static final int NEXT_RANDOM = 1;
 
     class IncomingHangler extends Handler{
@@ -31,7 +30,7 @@ public class MessengerService extends Service {
         public void handleMessage(Message msg) {
             switch (msg.what){
                 case NEXT_RANDOM:
-                    String text = "Numero Generado "+ nGenerator.nextInt(100);
+                    String text = "AppOriginal: Numero Generado "+ nGenerator.nextInt(100);
                     Log.d(TAG,text);
                     Toast.makeText(getApplicationContext(),text,Toast.LENGTH_SHORT).show();
                     Intent response = new Intent(RESPONSE_ACTION);
@@ -52,7 +51,7 @@ public class MessengerService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        Toast.makeText(getApplicationContext(),"Aplicacion conectada",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(),getString(R.string.toastConectada),Toast.LENGTH_SHORT).show();
         return mMessenger.getBinder();
     }
 

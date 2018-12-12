@@ -18,7 +18,7 @@ private static final String TAG = "tag";
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG,getString(R.string.esto_es_un_toast));
+                Log.d(TAG,getString(R.string.bottonPress));
                 Toast.makeText(getApplicationContext(), R.string.esto_es_un_toast,Toast.LENGTH_SHORT ).show();
             }
         });

@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String WHO = "Who";
     private TextView numRadom;
     private LocalReceiver receiver = new LocalReceiver();
+    public static final String RESPONSE = "Response";
     public static final String RESPONSE_ACTION = "Respuesta de la iteracion";
 
     @Override
@@ -37,10 +38,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private  class LocalReceiver extends BroadcastReceiver {
-        public static final String RESPONSE = "Response";
         @Override
         public void onReceive(Context context, Intent intent) {
-            Toast.makeText(getApplicationContext(),"Se recibio un numero nuevo, sera actualizado",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),getString(R.string.ToastRecibido),Toast.LENGTH_SHORT).show();
             String msg = intent.getStringExtra(RESPONSE);
             int who =0;
             who = intent.getIntExtra(WHO,-1);

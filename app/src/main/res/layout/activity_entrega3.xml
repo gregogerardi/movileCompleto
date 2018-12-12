@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:layout_weight="1"
-        android:text="Reset"
+        android:text="@string/reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_start2" />
@@ -25,7 +25,7 @@
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="195dp"
         android:layout_weight="1"
-        android:text="Stop"
+        android:text="@string/stop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/text_time" />
 
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="69dp"
         android:layout_weight="1"
-        android:text="Start"
+        android:text="@string/start"
         app:layout_constraintBaseline_toBaselineOf="@+id/btn_stop2"
         app:layout_constraintStart_toStartOf="@+id/btn_reset" />
 

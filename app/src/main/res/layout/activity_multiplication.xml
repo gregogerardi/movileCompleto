@@ -27,7 +27,7 @@
             android:layout_marginEnd="50dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Operando1"
+            android:text="@string/operando1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/editTextOperando2"
             app:layout_constraintTop_toTopOf="parent" />
@@ -41,7 +41,7 @@
             android:layout_marginEnd="82dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Operando2"
+            android:text="@string/operando2"
             app:layout_constraintEnd_toStartOf="@+id/editTextOperando1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="99dp"
         android:layout_marginBottom="129dp"
-        android:text="Multiplicar Operandos"
+        android:text="@string/multiplicar_operandos"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
